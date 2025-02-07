@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaWhatsapp, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
+import { FiDownload } from "react-icons/fi";
 import ProfileImage from "../assets/Profile.jpg";
 
 const Profile = () => {
@@ -77,6 +78,9 @@ const Profile = () => {
         </a>
         <a href="https://api.whatsapp.com/send?phone=8180989902&text=Hello,%20more%20information!" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp />
+        </a>
+        <a href="https://drive.google.com/file/d/1ORzHHFiXmAyaqxdMddCZDWZXBRO4TP98/view?usp=drive_link" target="_blank" download="PavanWagh.pdf" rel="noopener noreferrer">
+          <FiDownload /> 
         </a>
       </div>
     </section>

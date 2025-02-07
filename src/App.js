@@ -5,6 +5,7 @@ import Qualification from "./components/Qualification";
 import Services from "./components/Services";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Projects from "./components/Projects";
 
 
 function App() {
@@ -16,9 +17,7 @@ function App() {
           <Skills/>
           <Qualification/>
           <Services/>
-        <section id="projects" className="h-screen flex items-center justify-center">
-          <h1 className="text-3xl font-bold">Projects</h1>
-        </section>
+          <Projects/>
           <Contact/>
       </main>
       <Footer/>

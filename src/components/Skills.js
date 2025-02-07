@@ -8,16 +8,42 @@ const skillsData = {
         { name: "CSS", level: "Intermediate", icon: "css3" },
         { name: "JavaScript", level: "Intermediate", icon: "javascript" },
         { name: "React", level: "Basic", icon: "react" },
+        { name: "ExpressJS", level: "Basic", icon: "express" },
         { name: "NodeJs", level: "Basic", icon: "nodejs" },
-        { name: "Git", level: "Intermediate", icon: "git" }
+        { name: "MongoDB", level: "Basic", icon: "mongodb" },
+        { name: "MYSQL", level: "Intermediate", icon: "mysql" }
     ],
     "Languages": [
         { name: "C Programming", level: "Intermediate", icon: "c" },
-        { name: "CPP", level: "Advanced", icon: "cpp" },
-        { name: "JAVA", level: "Intermediate", icon: "java" },
+        { name: "CPP", level: "Intermediate", icon: "cpp" },
+        { name: "JavaScript", level: "Intermediate", icon: "javascript" },
+        { name: "JAVA", level: "Advance", icon: "java" },
         { name: "Python", level: "Intermediate", icon: "python" },
-        { name: "MYSQL", level: "Basic", icon: "mysql" }
-    ]
+        { name: "MYSQL", level: "Intermediate", icon: "mysql" }
+    ],
+    "Databases & Tools": [
+        { name: "SQL", level: "Intermediate", icon: "mysql" },
+        { name: "MongoDB", level: "Basic", icon: "mongodb" },
+        { name: "Firebase", level: "Basic", icon: "firebase" },
+        { name: "Git", level: "Intermediate", icon: "git" },
+        { name: "GitHub", level: "Intermediate", icon: "github" },
+        { name: "Postman", level: "Basic", icon: "postman" },
+        { name: "AWS", level: "Basic", icon: "aws" }
+    ],
+    "Technologies/Libraries": [
+        { name: "Bootstrap", level: "Intermediate", icon: "bootstrap" },
+        { name: "Tailwind CSS", level: "Intermediate", icon: "tailwindcss" },
+        { name: "ReactJS", level: "Basic", icon: "react" },
+        { name: "NodeJS", level: "Basic", icon: "nodejs" },
+        
+        { name: "Android Studio", level: "Basic", icon: "androidstudio" }
+    ],
+    "Other Skills": [
+        { name: "Problem Solving", level: "Advanced", icon: "problem-solving" },
+        { name: "Operating Systems", level: "Intermediate", icon: "os" },
+        { name: "Data Structures and Algorithms", level: "Intermediate", icon: "dsa" },
+        { name: "Database Management System", level: "Intermediate", icon: "dbms" }
+    ],
 };
 
 const iconMap = {
@@ -31,7 +57,16 @@ const iconMap = {
     cpp: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
     java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
     python: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
-    mysql: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+    mysql: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    bootstrap: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+    tailwindcss: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+    express: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    androidstudio: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
+    mongodb: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+    github: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    postman: "https://www.svgrepo.com/show/354202/postman-icon.svg",
+    aws: require("../assets/aws.png"),
+    firebase: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
 };
 
 const SkillCard = ({ skill }) => (
@@ -42,11 +77,12 @@ const SkillCard = ({ skill }) => (
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
     >
-        <img
-            src={iconMap[skill.icon]}
-            alt={skill.name}
-            className="w-14 h-14 transition-transform duration-300 ease-in-out group-hover:animate-bounce-up-down"
+        { iconMap[skill.icon] && <img
+        src={iconMap[skill.icon]}
+        alt={skill.name}
+        className="w-14 h-14 transition-transform duration-300 ease-in-out group-hover:animate-bounce-up-down"
         />
+    }
         <p className="mt-2 font-medium">{skill.name}</p>
         <span className="text-sm text-gray-500">{skill.level}</span>
     </motion.div>
