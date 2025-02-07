@@ -45,6 +45,16 @@ const Navbar = () => {
 
     return (
         <div className={`fixed top-0 w-full z-50 transition-all ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
+            {isMobile && (
+                <div className="fixed bottom-24 left-6 rounded-full dark:border-gray-300">
+                    <button
+                        onClick={() => setDarkMode(!darkMode)}
+                        className="p-2 rounded-full bg-gray-300 dark:bg-gray-800 transition-all duration-300"
+                    >
+                        {darkMode ? <Sun size={24} className="text-yellow-500" /> : <Moon size={24} className="text-gray-500" />}
+                    </button>
+                </div>
+            )}
             {/* Desktop & Tablet Navbar */}
             {!isMobile && (
                 <nav className="flex justify-between items-center px-6 sm:px-12 md:px-20 lg:px-32 xl:px-64 py-4 max-w-7xl mx-auto">
@@ -53,9 +63,8 @@ const Navbar = () => {
                         {navItems.map((item) => (
                             <li
                                 key={item.name}
-                                className={`cursor-pointer text-sm md:text-[15px] transition-colors duration-300 ${
-                                    active === item.name ? "font-semibold" : "text-gray-500 dark:text-gray-300"
-                                }`}
+                                className={`cursor-pointer text-sm md:text-[15px] transition-colors duration-300 ${active === item.name ? "font-semibold" : "text-gray-500 dark:text-gray-300"
+                                    }`}
                                 onClick={() => handleScroll(item.name)}
                             >
                                 {item.name}
@@ -75,25 +84,13 @@ const Navbar = () => {
 
             {/* Mobile Bottom Navbar */}
             {isMobile && (
-                <div>
-                    {/* Dark Mode Floating Button */}
-                    <div className="fixed bottom-24 right-6 rounded-full shadow-md border-t dark:border-gray-300 transition-all duration-300">
-                        <button
-                            onClick={() => setDarkMode(!darkMode)}
-                            className="p-2 rounded-full bg-gray-300 dark:bg-gray-800 transition-all duration-300"
-                        >
-                            {darkMode ? <Sun size={24} className="text-yellow-500" /> : <Moon size={24} className="text-gray-500" />}
-                        </button>
-                    </div>
-
-                    {/* Mobile Bottom Navbar */}
-                    <div className={`fixed bottom-0 w-full shadow-md flex justify-around py-3 border-t transition-all duration-300 ${darkMode ? "bg-gray-900 text-white border-gray-300" : "bg-white text-black border-gray-300"}`}>
+                <div className="fixed bottom-0">
+                    <div className={`fixed bottom-0 w-screen gap-5 flex justify-center px-4 py-3 border-t ${darkMode ? "bg-gray-900 max-w-full text-white border-gray-300" : "bg-white text-black border-gray-300"}`}>
                         {navItems.map((item) => (
                             <button
                                 key={item.name}
-                                className={`flex flex-col items-center hover:text-black text-gray-500 dark:text-gray-300 transition-colors duration-300 ${
-                                    active === item.name ? "font-semibold text-black dark:text-white" : ""
-                                }`}
+                                className={`flex flex-col items-center hover:text-black text-gray-500 dark:text-gray-300 transition-colors duration-300 ${active === item.name ? "font-semibold text-black dark:text-white" : ""
+                                    }`}
                                 onClick={() => handleScroll(item.name)}
                             >
                                 {item.icon}

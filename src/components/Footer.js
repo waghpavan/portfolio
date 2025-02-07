@@ -13,7 +13,7 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="flex flex-col items-center justify-center text-center py-8 space-y-4 text-gray-700 dark:text-gray-300">
+        <footer className="flex flex-col pb-32 items-center justify-center text-center py-8 space-y-4 text-gray-700 dark:text-gray-300">
             {/* Name and Role */}
             <h2 className="text-2xl font-semibold">Pavan</h2>
             <p className="text-sm">Full stack Developer</p>
