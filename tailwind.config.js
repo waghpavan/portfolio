@@ -26,6 +26,7 @@ export default {
         'fade-in-right': 'fadeInRight 1s ease-out forwards',
         'fade-in': 'fadeIn 1s ease-out forwards',
         'pop': 'pop 1s ease-out forwards',
+        "bounce-up-down": "bounce-up-down 0.6s ease-in-out infinite",
       },
       keyframes: {
         fadeInLeft: {
@@ -45,6 +46,10 @@ export default {
           '25%': { transform: 'scale(1)', opacity: '1' },
           '50%': { transform: 'scale(1.2)', opacity: '1' },
           '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        "bounce-up-down": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
         },
       },
     },
