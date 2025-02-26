@@ -24,14 +24,14 @@ const projects = [
         duration: "2 Months",
         description: "AI-driven platform offering personalized learning experiences with modular course structures.",
         github: "https://github.com/waghpavan/smartlearner",
-        visit: "/"
+        visit: "https://smart-qa4t.onrender.com/"
     },
     {
         title: "Android App for Police Management",
         image: require("../assets/Android.png"),
         duration: "2 Months",
         description: "Developed an app to assist police in event and personnel management during the Pandharpur Yatra.",
-        github: "/",
+        github: "https://github.com/waghpavan/Mauli",
         visit: "https://drive.google.com/file/d/1yo4TkjNIjvg_Oozy0_AfW2Q-VFiopY1w/view?usp=drive_link"
     },
     {
