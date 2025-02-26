@@ -23,7 +23,7 @@ const projects = [
         image: require("../assets/Smart.png"),
         duration: "2 Months",
         description: "AI-driven platform offering personalized learning experiences with modular course structures.",
-        github: "https://github.com/waghpavan/smartlearner",
+        github: "https://github.com/waghpavan/smartlearner/tree/master",
         visit: "https://smart-qa4t.onrender.com/"
     },
     {
