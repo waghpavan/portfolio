@@ -9,7 +9,7 @@ const qualifications = {
             title: "B.Tech in Information Technology",
             institute: "Vishwakarma Institute of Information Technology, Pune",
             duration: "2023 - 2026",
-            details: "8.25 CGPA",
+            details: "8.51 CGPA",
         },
         {
             title: "Diploma in Information Technology",
@@ -21,7 +21,7 @@ const qualifications = {
             title: "10th Class",
             institute: "Shiv Chhatrapati Public School, Nandore",
             duration: "2019 - 2020",
-            details: "84.20%",
+            details: "85.20%",
         },
     ],
     experience: [
@@ -34,8 +34,8 @@ const qualifications = {
         {
             title: "Web Developer Intern",
             company: "Big Buddies Foundation - Pune",
-            duration: "1 / Sept / 2024 - 30 / Nov / 2024",
-            month: "3 Months",
+            duration: "1 / Aug / 2024 - 30 / Nov / 2024",
+            month: "4 Months",
         },
     ],
 };

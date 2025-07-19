@@ -51,7 +51,7 @@ const Profile = () => {
         {/* Right Info */}
         <div className="text-center md:text-right space-y-6 max-w-xs sm:max-w-sm animate-fade-in-right">
           {[
-            { title: "YEARS OF EXPERIENCE", value: "0" },
+            { title: "YEARS OF EXPERIENCE", value: "06+ Months" },
             { title: "COMPLETED PROJECTS", value: "05+" },
             { title: "COMPANIES WORKED", value: "02+" }
           ].map(({ title, value }) => (
